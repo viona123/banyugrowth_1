@@ -8,20 +8,19 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('umkms', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lengkap');
+            $table->string('nama');
             $table->string('email')->unique();
             $table->string('no_hp');
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('role')->default('umkm'); // 'admin' / 'umkm'
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('umkms');
     }
 };
