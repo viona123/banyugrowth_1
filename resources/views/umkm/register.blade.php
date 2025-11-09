@@ -11,8 +11,7 @@
     <div class="bg-white w-96 rounded-xl shadow-lg p-8">
         <h2 class="text-2xl font-bold text-center mb-6 text-gray-700">Daftar UMKM</h2>
 
-        <form action="/umkm/register" method="POST">
-            @csrf
+        
 
             <label class="block font-semibold text-gray-700">Nama Lengkap</label>
             <input type="text" name="nama" required class="w-full border rounded-lg p-2 mb-3">
@@ -32,10 +31,16 @@
             <label class="block font-semibold text-gray-700">Konfirmasi Password</label>
             <input type="password" name="password_confirmation" required class="w-full border rounded-lg p-2 mb-6">
 
-            <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+
+           <div>
+           <a href="/umkm/login">
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
                 Register
             </button>
-        </form>
+            </a>
+              </div>
+        
+        
 
         <p class="text-center text-sm mt-4">
             Sudah punya akun?

@@ -68,4 +68,16 @@ class UmkmAuthController extends Controller
         Session::flush();
         return redirect('/umkm/login');
     }
+
+    public function detailProduk($id)
+    {
+        $produk = [
+            "nama" => "Brownies Coklat Premium",
+            "harga" => 25000,
+            "deskripsi" => "Brownies panggang premium olahan coklat kualitas tinggi",
+            "image" => "/assets/img/contoh_produk.jpg"
+        ];
+
+        return view('umkm.detail', compact('produk'));
+    }
 }

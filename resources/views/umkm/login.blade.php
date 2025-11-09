@@ -11,8 +11,7 @@
     <div class="bg-white w-96 rounded-xl shadow-lg p-8">
         <h2 class="text-2xl font-bold text-center mb-6 text-gray-700">Login UMKM</h2>
 
-        <form action="/umkm/login" method="POST">
-            @csrf
+       
 
             <label class="block font-semibold text-gray-700">Username</label>
             <input type="text" name="username" required class="w-full border rounded-lg p-2 mb-4">
@@ -20,10 +19,14 @@
             <label class="block font-semibold text-gray-700">Password</label>
             <input type="password" name="password" required class="w-full border rounded-lg p-2 mb-6">
 
-            <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+           <div>
+           <a href="/umkm/home">
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
                 Login
             </button>
-        </form>
+            </a>
+              </div>
+        
 
         <p class="text-center text-sm mt-4">
             Belum punya akun?
